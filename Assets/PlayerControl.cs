@@ -23,6 +23,10 @@ public class PlayerControl : MonoBehaviour
     private float dashTime;
     private bool isDashing;
 
+    [Header("Rotation")]
+    [SerializeField] private float RotationSpeed = 10.0f; 
+    [SerializeField] private float RotationThreshold = 0.01f;
+
     void Start()
     {
         dashTimer = dashCooldown;
@@ -77,10 +81,20 @@ public class PlayerControl : MonoBehaviour
             horizontalMove = new Vector3(moveInput.x, 0, moveInput.y) * MovementSpeed;
         }
 
+        Vector3 lookDir = isDashing ? new Vector3(dashDirection.x, 0f, dashDirection.z) : new Vector3(horizontalMove.x, 0f, horizontalMove.z);
+        if (lookDir.sqrMagnitude > RotationThreshold)
+        {
+            Quaternion targetRot = Quaternion.LookRotation(lookDir.normalized, Vector3.up);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRot, RotationSpeed * Time.deltaTime);
+        }
+
         jumpInput.y += gravity * Time.deltaTime;
 
         Vector3 finalMove = horizontalMove + new Vector3(0, jumpInput.y, 0);
         characterController.Move(finalMove * Time.deltaTime);
+
+
+
 
     }
     }
