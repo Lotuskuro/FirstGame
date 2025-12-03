@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: ffb2eb9a4948a2545956bbd21b039ddc
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - <EnemyPrefab>k__BackingField: {fileID: 2346453615841774947, guid: b1f86a6da451e57498c7020ecab796d4, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
