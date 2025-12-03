@@ -612,9 +612,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e45b97569491584e93f45db45cb5ffd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WaveSpawner
-  Edata:
-  - {fileID: 11400000, guid: e2bdf234b009ab944be133ab60dc7b22, type: 2}
-  - {fileID: 11400000, guid: f0c03483135225b4c9aa14a95520e812, type: 2}
+  Edata: {fileID: 11400000, guid: e2bdf234b009ab944be133ab60dc7b22, type: 2}
+  EnemyToSpawn: {fileID: 996271375045557427, guid: 27fbbaceae629db448a71c93a0cfec7e, type: 3}
   spawnInterval: 1
 --- !u!1 &832575517
 GameObject:

@@ -2,13 +2,19 @@ using UnityEngine;
 
 public class WaveSpawner : MonoBehaviour
 {
-    public EnemyData[] Edata;
+    public EnemyData Edata;
+    public GameObject EnemyToSpawn;
+
+
     public float spawnInterval = 1f;
     private float spawnTimer = 0f;
+    
     
 
     void Awake()
     {
+        Edata = ScriptableObject.CreateInstance<EnemyData>();
+        Edata.targetPrefab = GameObject.FindWithTag("Player");
         
     }
 
@@ -19,17 +25,15 @@ public class WaveSpawner : MonoBehaviour
         if (spawnTimer >= spawnInterval)
         {
             Spawner();
+            
             spawnTimer = 0f;
         }
+        
     }
     public void Spawner() 
     {
        Vector3 spawnPosition = new Vector3(Random.Range(-10f, 10f), 1, Random.Range(-10f, 10f));
-       Instantiate(Edata[0].enemyPrefab, spawnPosition, Quaternion.identity);
-        
-            
-        
-
+       Instantiate(EnemyToSpawn, spawnPosition, Quaternion.identity);
     }
     
  

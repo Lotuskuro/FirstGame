@@ -12,11 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffb2eb9a4948a2545956bbd21b039ddc, type: 3}
   m_Name: Mob2
   m_EditorClassIdentifier: Assembly-CSharp::EnemySpawner
-  enemyType: 0
+  enemyType: 1
   enemyPrefab: {fileID: 996271375045557427, guid: 27fbbaceae629db448a71c93a0cfec7e, type: 3}
   targetPrefab: {fileID: 3195319873571597299, guid: d9ce1abc253c87e4c96d047113742bbd, type: 3}
   enemyHealth: 400
   enemyDamage: 25
   enemyDefense: 50
-  enemyAtkSpeed: 20
-  enemyMoveSpeed: 10

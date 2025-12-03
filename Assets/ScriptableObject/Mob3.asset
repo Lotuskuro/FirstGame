@@ -12,10 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffb2eb9a4948a2545956bbd21b039ddc, type: 3}
   m_Name: Mob3
   m_EditorClassIdentifier: Assembly-CSharp::EnemySpawner
-  enemyType: Boss
+  enemyType: 2
+  enemyPrefab: {fileID: 6965090385174458712, guid: 2578736cfce03c84eb05079100c76c95, type: 3}
+  targetPrefab: {fileID: 0}
   enemyHealth: 1000
   enemyDamage: 50
   enemyDefense: 100
-  enemyAtkSpeed: 30
-  enemyMoveSpeed: 20
-  enemyPrefab: {fileID: 6965090385174458712, guid: 2578736cfce03c84eb05079100c76c95, type: 3}

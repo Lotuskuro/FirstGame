@@ -22,8 +22,7 @@ public class EnemyData : ScriptableObject
     public int enemyHealth;
     public int enemyDamage;
     public int enemyDefense;
-    public float enemyAtkSpeed;
-    public float enemyMoveSpeed;
+   
 
-
+    
 }
